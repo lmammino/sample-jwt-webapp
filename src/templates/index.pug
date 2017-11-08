@@ -1,0 +1,25 @@
+extends /layout.pug
+
+block content
+  div.content
+    if error
+      div.notification.is-danger
+        p
+          | <strong>Error</strong>: #{hasError}
+    
+    if !session
+      h2.subtitle You are not logged in, please <a href="/login"/>login</a>
+    else
+      p.is-size-2
+        | Hello #{session.sub}
+      p.is-size-3
+        | You are logged in as a <strog>#{session.role}</strong>
+
+      if session.role === 'admin'
+        p.is-size-4
+          | as an admin you have access to:
+          | <a class="button is-danger" id="powerful-features" href="#">Powerful Features</a>
+      else
+        p.is-size-4
+          | there is nothing you ca do here...
+        

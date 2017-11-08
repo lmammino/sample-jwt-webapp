@@ -1,0 +1,21 @@
+extends /layout.pug
+
+block content
+  div.content
+    h2.title Login
+    if hasError
+      div.notification.is-danger
+        p
+          | <strong>Error</strong>: Invalid credentials
+    form(action='/login', method='post')
+      div.field
+        label.label Username
+        div.control
+          input.input(name='username', type='text', placeholder='Username')
+      div.field
+        label.label Password
+        div.control
+          input.input(name='password', type='password', placeholder='Password')
+      div.field
+        div.control
+          button.button.is-link Submit

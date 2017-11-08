@@ -1,0 +1,24 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Sample-jwt-webapp
+    block css
+      link(rel='stylesheet', href='/assets/css/bulma.css')
+  body
+    section.section
+      div.container
+        h1.title Sample-jwt-webapp
+        p.subtitle
+          | A sample JWT web app that can be use to demonstrate how to escalate permissions by cracking and forging JWT tokens
+    section.section
+      div.container
+        block content
+    block foot
+      footer.footer
+        div.container
+          div.content.has-text-centered
+            p
+              | Built by <a href="https://loige.co">Luciano Mammino</a> using
+              | <a href="https://fastify.io">Fastify</a> and <a href="https://bulma.io">Bulma</a>
+      script(src='/assets/js/app.js')
