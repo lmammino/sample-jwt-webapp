@@ -35,7 +35,7 @@ module.exports = (fastify, opts, next) => {
       try {
         session = jwt.verify(sid, jwtSecret)
       } catch (err) {
-        error = err.message
+        error = 'Invalid session token'
       }
     }
 
