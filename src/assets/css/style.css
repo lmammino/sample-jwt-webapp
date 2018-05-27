@@ -1,0 +1,72 @@
+html, html body {
+  background: black;
+  background-image: url('../images/dark-grey-terrazzo.png');
+  font-family: 'Rubik', sans-serif;
+}
+
+.container.main {
+  background: #ebe7d6;
+  background-image: url('../images/ricepaper_v3.png');
+  border-radius: 2em;
+  box-shadow: 10px -10px 10px #000000, 10px 10px 10px #000000;
+  padding: 2em;
+  min-height: 60vh;
+}
+
+.container.main h1, h2 {
+  font-family: 'Fruktur', cursive;
+  text-align: center;
+}
+
+.container.main hr {
+    overflow: visible; /* For IE */
+    height: 30px;
+    max-width: 90%;
+    width: 500px;
+    margin: 2em auto;
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+.container.main hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.container.main form {
+  max-width: 90%;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.container.main form .field input.input,
+.container.main form .field button.button {
+  font-family: 'Fruktur', cursive;
+  font-size: 2em;
+}
+
+footer {
+  color: #fff;
+}
+
+footer .content p {
+  text-shadow: 4px -4px 4px #000000, 4px 4px 4px #000000;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #3273dc;
+}

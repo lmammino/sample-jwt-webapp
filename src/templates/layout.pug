@@ -2,23 +2,25 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Sample-jwt-webapp
+    title MOS - Merlin's online spellbook
     block css
       link(rel='stylesheet', href='/assets/css/bulma.min.css')
+      link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Fruktur|Rubik:400,700')
+      link(rel='stylesheet', href='/assets/css/style.css')
   body
     section.section
-      div.container
-        h1.title Sample-jwt-webapp
-        p.subtitle
-          | A sample JWT web app that can be use to demonstrate how to escalate permissions by cracking and forging JWT tokens
-    section.section
-      div.container
+      div.container.main
+        header.has-text-centered
+          h1.title
+            a(href='/') Merlin's online spellbook
+          h2.subtitle manage your spell knowledge online
+          hr
         block content
     block foot
-      footer.footer
-        div.container
-          div.content.has-text-centered
-            p
+      footer
+        section.section
+          div.container.has-text-centered
+            p.is-size-7
               | Built by <a href="https://loige.co">Luciano Mammino</a> using
-              | <a href="https://fastify.io">Fastify</a> and <a href="https://bulma.io">Bulma</a>
-      script(src='/assets/js/app.js')
+              | <a href="https://fastify.io">Fastify</a> and <a href="https://bulma.io">Bulma</a>. Backgrounds by <a href="https://www.toptal.com/designers/subtlepatterns/">SubtlePatterns</a>.
+    script(src='/assets/js/app.js')

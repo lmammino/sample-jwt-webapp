@@ -8,18 +8,18 @@ block content
           | <strong>Error</strong>: #{error}
     
     if !session
-      h2.subtitle You are not logged in, please <a href="/login"/>login</a>
+      h2.subtitle 
+        | You are not logged in, please <a href="/login"/>login</a>
     else
-      p.is-size-2
-        | Hello #{session.sub}
-      p.is-size-3
-        | You are logged in as a <strog>#{session.role}</strong>
+      p.is-size-4.has-text-centered
+        | Hello <strong>#{session.sub}</strong>, you are logged in as a <strong>#{session.role}</strong>.
 
       if session.role === 'admin'
-        p.is-size-4
-          | as an admin you have access to:
-          | <a class="button is-danger" id="powerful-features" href="#">Powerful Features</a>
+        p.is-size-4.has-text-centered
+          | as an <strong>admin</strong> you have access to the most powerful spell
+        p.is-size-4.has-text-centered
+          a.button.is-danger(id="powerful-features" href="#") Exploding confetti spell
       else
-        p.is-size-4
-          | there is nothing you ca do here...
+        p.is-size-4.has-text-centered
+          | unfortunately you have no spells with your role...
         
